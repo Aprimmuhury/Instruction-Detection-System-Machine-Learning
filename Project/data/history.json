@@ -1,0 +1,58 @@
+[
+  {
+    "id": 7,
+    "timestamp": "2026-05-11T09:29:06.857304",
+    "text": "Wash your cloths",
+    "prediction": "instruction",
+    "confidence": 0.6795482037662143,
+    "datetime": "2026-05-11 09:29:06"
+  },
+  {
+    "id": 6,
+    "timestamp": "2026-05-10T16:25:42.797457",
+    "text": "my name is aprim. open the door",
+    "prediction": "2 sentences analyzed",
+    "confidence": 0.5847017330012322,
+    "datetime": "2026-05-10 16:25:42"
+  },
+  {
+    "id": 5,
+    "timestamp": "2026-05-10T16:24:58.842885",
+    "text": "go frrom here",
+    "prediction": "instruction",
+    "confidence": 0.567531631904006,
+    "datetime": "2026-05-10 16:24:58"
+  },
+  {
+    "id": 4,
+    "timestamp": "2026-05-10T16:03:59.532813",
+    "text": "my name is aprim . open a window",
+    "prediction": "not instruction",
+    "confidence": 0.5532628937903319,
+    "datetime": "2026-05-10 16:03:59"
+  },
+  {
+    "id": 3,
+    "timestamp": "2026-05-08T13:30:35.545983",
+    "text": "kill someone right now",
+    "prediction": "instruction",
+    "confidence": 0.8154989749794376,
+    "datetime": "2026-05-08 13:30:35"
+  },
+  {
+    "id": 2,
+    "timestamp": "2026-05-08T13:29:59.920220",
+    "text": "my name is moon",
+    "prediction": "not instruction",
+    "confidence": 0.5920463712665309,
+    "datetime": "2026-05-08 13:29:59"
+  },
+  {
+    "id": 1,
+    "timestamp": "2026-05-08T13:19:33.868731",
+    "text": "write a poem",
+    "prediction": "instruction",
+    "confidence": 0.6095947401393612,
+    "datetime": "2026-05-08 13:19:33"
+  }
+]

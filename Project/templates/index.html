@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instruction Detection System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>🧠 Instruction Detection System</h1>
+
+        <div class="tabs">
+            <button class="tab active" onclick="showTab('analyzer', event)">Analyzer</button>
+            <button class="tab" onclick="showTab('history', event)">History</button>
+        </div>
+
+        <div id="analyzer" class="tab-content active">
+            <div class="input-group">
+                <label for="instruction-input">Enter your text (sentence or paragraph):</label>
+                <textarea id="instruction-input"
+                    placeholder="Type your text here... The system will analyze each sentence to determine if it's an instruction or not."
+                    maxlength="5000"></textarea>
+            </div>
+
+            <button onclick="analyzeInstruction()" class="primary-btn">Analyze Text</button>
+
+            <div id="loading" class="loading">
+                <div class="spinner"></div>
+                Analyzing...
+            </div>
+
+            <div id="result" class="result">
+                <h3>Analysis Result:</h3>
+                <div id="analysis-results"></div>
+            </div>
+
+            <div class="stats">
+                <h3>Model Statistics</h3>
+                <p><strong>Training Accuracy:</strong> <span id="train-accuracy">Loading...</span></p>
+                <p><strong>Model Type:</strong> Logistic Regression with TF-IDF</p>
+                <p><strong>Features:</strong> Text vectorization using TF-IDF</p>
+            </div>
+        </div>
+
+        <div id="history" class="tab-content">
+            <div class="history-controls">
+                <input type="text" id="search-input" class="search-box" placeholder="Search history..."
+                    onkeyup="filterHistory()">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="setFilter('all', event)">All</button>
+                    <button class="filter-btn" onclick="setFilter('instruction', event)">Instructions</button>
+                    <button class="filter-btn" onclick="setFilter('not instruction', event)">Not Instructions</button>
+                </div>
+                <button class="btn-danger clear-history-btn" onclick="clearHistory()">Clear History</button>
+            </div>
+
+            <div id="history-list" class="history-list">
+                <div class="no-history">
+                    <p>No prediction history yet. Try analyzing some instructions first!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>
